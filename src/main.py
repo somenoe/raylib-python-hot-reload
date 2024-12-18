@@ -11,7 +11,7 @@ def draw(counter):
     r.draw_text("Running on PyRay", w, h - 30, 20, r.GREEN)
     r.draw_text("Hello world!", w, h, 20, r.GREEN)
 
-    r.draw_text(str(counter), r.get_screen_width() - 50, 10, 20, r.GREEN)
+    r.draw_text(str(counter), r.get_screen_width() - 50, 10, 20, r.RED)
 
     r.end_drawing()
 
