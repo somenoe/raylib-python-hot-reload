@@ -11,6 +11,8 @@ def draw(counter):
 
     r.clear_background(r.BLACK)
 
+    r.draw_fps(10, 10)
+
     h = int(r.get_screen_height() / 2)
     w = int(r.get_screen_width() / 2) - (200)
     r.draw_text(
