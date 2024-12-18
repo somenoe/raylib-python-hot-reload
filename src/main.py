@@ -40,6 +40,22 @@ def draw(counter):
     r.end_drawing()
 
 
+def set_keyboard_shortcuts(counter: int) -> None:
+    if r.is_key_pressed(r.KeyboardKey.KEY_Q):
+        r.close_window()
+
+    if r.is_key_pressed(r.KeyboardKey.KEY_F):
+        r.toggle_borderless_windowed()
+
+    if r.is_key_pressed(r.KeyboardKey.KEY_R):
+        counter = 0
+
+    if r.is_key_pressed(r.KeyboardKey.KEY_UP):
+        counter += 1
+    if r.is_key_pressed(r.KeyboardKey.KEY_DOWN):
+        counter -= 1
+
+
 def main():
     r.init_window(800, 500, "Hot reload with raylib python")
     r.set_target_fps(60)
@@ -49,19 +65,7 @@ def main():
     while not r.window_should_close():
         draw(counter)
 
-        if r.is_key_pressed(r.KeyboardKey.KEY_Q):
-            r.close_window()
-
-        if r.is_key_pressed(r.KeyboardKey.KEY_F):
-            r.toggle_borderless_windowed()
-
-        if r.is_key_pressed(r.KeyboardKey.KEY_R):
-            counter = 0
-
-        if r.is_key_pressed(r.KeyboardKey.KEY_UP):
-            counter += 1
-        if r.is_key_pressed(r.KeyboardKey.KEY_DOWN):
-            counter -= 1
+        set_keyboard_shortcuts(counter)
 
     r.close_window()
 
