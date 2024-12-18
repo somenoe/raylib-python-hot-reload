@@ -1,7 +1,7 @@
 import pyray as r
 
 
-def draw():
+def draw(counter):
     r.begin_drawing()
 
     r.clear_background(r.BLACK)
@@ -23,7 +23,7 @@ def main():
     counter = 0
 
     while not r.window_should_close():
-        draw()
+        draw(counter)
 
         if r.is_key_pressed(r.KeyboardKey.KEY_Q):
             r.close_window()
