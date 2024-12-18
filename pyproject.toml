@@ -1,0 +1,7 @@
+[project]
+name = "raylib-python-hot-reload"
+version = "0.0.1"
+description = "A proof of concept of using hot reload with the raylib library in Python."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
