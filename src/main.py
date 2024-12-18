@@ -1,4 +1,9 @@
 import pyray as r
+import math
+
+DEFAULT_FONT_SIZE = 40
+DEFAULT_FONT_SPACING = DEFAULT_FONT_SIZE + 10
+DEFAULT_TEXT_COLOR = r.WHITE
 
 
 def draw(counter):
@@ -7,9 +12,15 @@ def draw(counter):
     r.clear_background(r.BLACK)
 
     h = int(r.get_screen_height() / 2)
-    w = int(r.get_screen_width() / 2)
-    r.draw_text("Running on PyRay", w, h - 30, 20, r.GREEN)
-    r.draw_text("Hello world!", w, h, 20, r.GREEN)
+    w = int(r.get_screen_width() / 2) - (200)
+    r.draw_text(
+        "Running on PyRay",
+        w,
+        h - DEFAULT_FONT_SPACING,
+        DEFAULT_FONT_SIZE,
+        DEFAULT_TEXT_COLOR,
+    )
+    r.draw_text("Hello world!", w, h, DEFAULT_FONT_SIZE, DEFAULT_TEXT_COLOR)
 
     if counter == 0:
         color = r.GRAY
@@ -18,16 +29,22 @@ def draw(counter):
     else:
         color = r.RED
 
-    r.draw_text(str(counter), r.get_screen_width() - 50, 10, 20, color)
+    r.draw_text(
+        str(counter),
+        r.get_screen_width() - math.floor(DEFAULT_FONT_SIZE * 1.5),
+        math.floor(DEFAULT_FONT_SIZE / 1.5),
+        math.floor(DEFAULT_FONT_SIZE / 1.25),
+        color,
+    )
 
     r.end_drawing()
 
 
 def main():
-    r.init_window(800, 500, "Hello")
+    r.init_window(800, 500, "Hot reload with raylib python")
     r.set_target_fps(60)
-    # r.toggle_borderless_windowed()
-    counter = 0
+
+    counter: int = 0
 
     while not r.window_should_close():
         draw(counter)
@@ -37,6 +54,9 @@ def main():
 
         if r.is_key_pressed(r.KeyboardKey.KEY_F):
             r.toggle_borderless_windowed()
+
+        if r.is_key_pressed(r.KeyboardKey.KEY_R):
+            counter = 0
 
         if r.is_key_pressed(r.KeyboardKey.KEY_UP):
             counter += 1
