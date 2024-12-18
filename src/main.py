@@ -40,7 +40,7 @@ def draw(counter):
     r.end_drawing()
 
 
-def set_keyboard_shortcuts(counter: int) -> None:
+def set_keyboard_shortcuts(counter: int) -> int:
     if r.is_key_pressed(r.KeyboardKey.KEY_Q):
         r.close_window()
 
@@ -48,12 +48,14 @@ def set_keyboard_shortcuts(counter: int) -> None:
         r.toggle_borderless_windowed()
 
     if r.is_key_pressed(r.KeyboardKey.KEY_R):
-        counter = 0
+        return 0
 
     if r.is_key_pressed(r.KeyboardKey.KEY_UP):
-        counter += 1
+        return counter + 1
     if r.is_key_pressed(r.KeyboardKey.KEY_DOWN):
-        counter -= 1
+        return counter - 1
+    
+    return counter
 
 
 def main():
@@ -65,7 +67,7 @@ def main():
     while not r.window_should_close():
         draw(counter)
 
-        set_keyboard_shortcuts(counter)
+        counter = set_keyboard_shortcuts(counter)
 
     r.close_window()
 
