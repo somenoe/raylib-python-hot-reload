@@ -1,6 +1,6 @@
 # Raylib Python Hot Reload
 
-This project shows how to use hot reload with the Raylib library in Python.
+A proof of concept of using hot reload with the raylib library in Python.
 
 ## What you need
 
@@ -29,9 +29,9 @@ This project shows how to use hot reload with the Raylib library in Python.
 
 ## .bat files (Windows)
 
--   `aider`:  Use an AI chatbot (optional).
 -   `install`: Installs the necessary tools and creates the virtual environment.
 -   `freeze`: Creates a list of required packages.
 -   `dev`: Runs the project during development.
 -   `build`: Creates an .exe file.
 -   `exe`: Runs the .exe file created by `build`.
+-   `aider`:  Use an AI chatbot (optional).
