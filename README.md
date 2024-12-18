@@ -1,37 +1,37 @@
 # Raylib Python Hot Reload
 
-A proof of concept of using hot reload with the raylib library in Python.
+This project shows how to use hot reload with the Raylib library in Python.
 
-## requirements
+## What you need
 
-- **[uv](https://github.com/astral-sh/uv)** package and project manager
-- **[jurigged](https://github.com/breuleux/jurigged)** hot reload tool
-- **[raylib](https://www.raylib.com/)** library for videogames
-- **[raylib python](https://electronstudio.github.io/raylib-python-cffi/)** for raylib python binding
-- **[pyinstaller](https://pyinstaller.org/en/stable/)** build .exe file
+-   **uv:** A tool to manage Python projects. ([https://github.com/astral-sh/uv](https://github.com/astral-sh/uv))
+-   **jurigged:** A tool for hot reloading code. ([https://github.com/breuleux/jurigged](https://github.com/breuleux/jurigged))
+-   **raylib:** A library for making video games. ([https://www.raylib.com/](https://www.raylib.com/))
+-   **raylib-python:**  A way to use raylib with Python. ([https://electronstudio.github.io/raylib-python-cffi/](https://electronstudio.github.io/raylib-python-cffi/))
+-   **pyinstaller:** A tool to create .exe files. ([https://pyinstaller.org/en/stable/](https://pyinstaller.org/en/stable/))
 
-## set up virtual environment
+## How to set up the project
 
-1. setup
-	```bash
-	uv venv
-	```
+1.  **Create a virtual environment:**
+    ```bash
+    uv venv
+    ```
 
-2. activate
-	```bash
-	.venv\Scripts\activate
-	```
+2.  **Activate the virtual environment:**
+    ```bash
+    .venv\Scripts\activate
+    ```
 
-3. deactivate (same terminal after activate)
-	```bash
-	.venv\Scripts\deactivate
-	```
+3.  **Deactivate the virtual environment:** (Run this in the same terminal after activating)
+    ```bash
+    .venv\Scripts\deactivate
+    ```
 
-## .bat files
+## .bat files (Windows)
 
-- `aider` call ai chatbot (optional)
-- `install` for install required deps and make python virsul environment
-- `freeze` for generate requirements.txt
-- `dev` for run during development
-- `build` for build .exe file
-- `exe` for run preview .exe file from `build`
+-   `aider`:  Use an AI chatbot (optional).
+-   `install`: Installs the necessary tools and creates the virtual environment.
+-   `freeze`: Creates a list of required packages.
+-   `dev`: Runs the project during development.
+-   `build`: Creates an .exe file.
+-   `exe`: Runs the .exe file created by `build`.
