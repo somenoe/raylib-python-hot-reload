@@ -29,6 +29,7 @@ A proof of concept of using hot reload with the raylib library in Python.
 
 ## .bat files
 
+- `aider` call ai chatbot (optional)
 - `install` for install required deps and make python virsul environment
 - `freeze` for generate requirements.txt
 - `dev` for run during development
